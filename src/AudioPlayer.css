@@ -1,0 +1,30 @@
+/* AudioPlayer.css */
+.page {
+  text-align: center;
+}
+
+.items {
+  list-style-type: none;
+  padding: 0;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.audio_titles {
+  margin-top: 20px;
+}
+
+.foot{
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+  font-family: serif;
+  font-style: italic;
+  text-align: center; 
+  font-size: large;
+}
+
+
+
