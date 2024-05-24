@@ -16,6 +16,60 @@
 }
 
 .App-main {
+  margin-top: 120px;
+}
+
+.toggle-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toggle-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .App-main {
+    margin-top: 100px;
+  }
+}
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+.App-main {
   margin-top: 100px;
   display: flex;
   justify-content: center;
@@ -65,4 +119,4 @@ li {
   .App-main {
     margin-top: 80px;
   }
-}
+} */

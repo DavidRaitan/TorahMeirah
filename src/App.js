@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Welcome to Torah Meirah</h1>
-        <button onClick={toggleComponent}>
+        <button onClick={toggleComponent} className="toggle-button">
           {showAboutUs ? 'Show Audio Player' : 'Show About'}
         </button>
       </header>
@@ -27,6 +27,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
