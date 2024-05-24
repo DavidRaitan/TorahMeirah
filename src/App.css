@@ -1,4 +1,3 @@
-/* src/App.css */
 .App {
   text-align: center;
 }
@@ -47,3 +46,23 @@ li {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .App-main {
+    margin-top: 80px;
+  }
+}

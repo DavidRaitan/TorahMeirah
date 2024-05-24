@@ -1,8 +1,6 @@
-/* AudioPlayer.css */
 .page {
   text-align: center;
-  margin-top: 10%;
-
+  margin-top: 5%;
 }
 
 .items {
@@ -16,17 +14,34 @@
   margin-top: 20px;
 }
 
-.foot{
+.foot {
   position: absolute;
-  bottom: 10px; 
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 40px;
   font-family: serif;
   font-style: italic;
-  text-align: center; 
+  text-align: center;
   font-size: large;
 }
 
+@media (max-width: 768px) {
+  .page {
+    font-size: 24px;
+  }
+
+  .items {
+    font-size: 16px;
+  }
+
+  .audio_titles {
+    font-size: 18px;
+  }
+
+  .foot {
+    font-size: 14px;
+  }
+}
 
 

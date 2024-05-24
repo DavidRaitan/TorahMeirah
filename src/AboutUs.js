@@ -6,7 +6,6 @@ function AboutUs() {
     <div className="home-container">
       <div className="button-container">
         <button onClick={() => window.location.href="#progress"} className="button">Our Progress</button>
-        <button onClick={() => window.location.href="#vision"} className="button">Our Vision</button>
       </div>
 
       <section id="vision" className="section">
