@@ -16,7 +16,7 @@ function App() {
       <header className="App-header">
         <h1>Welcome to Torah Meirah</h1>
         <button onClick={toggleComponent} className="toggle-button">
-          {showAboutUs ? 'Show Audio Player' : 'Show About'}
+          {showAboutUs ? 'Audio Classes' : 'About'}
         </button>
       </header>
       <main className="App-main">
