@@ -3,11 +3,7 @@ controls {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .controls {
-    flex-direction: column; /* Change to column layout on mobile */
-  }
-}
+
 
 
 
