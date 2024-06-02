@@ -65,7 +65,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .home-container {
-    margin-top: 900px; /* Margin-top for phones */
+    margin-top: 1100px; /* Margin-top for phones */
     font-size: medium; /* Adjust font size for smaller screens */
   }
 
