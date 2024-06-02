@@ -27,7 +27,7 @@
 /* Media query for phones */
 @media (max-width: 768px) {
   .App-main {
-    margin-top: 600px; /* Margin-top for phones */
+    margin-top: 300px; /* Margin-top for phones */
   }
 }
 

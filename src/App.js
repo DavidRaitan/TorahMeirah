@@ -5,7 +5,7 @@ import AboutUs from './AboutUs';
 import AudioPlayer from './AudioPlayer';
 
 function App() {
-  const [showAboutUs, setShowAboutUs] = useState(true);
+  const [showAboutUs, setShowAboutUs] = useState(false);
 
   const toggleComponent = () => {
     setShowAboutUs((prevShowAboutUs) => !prevShowAboutUs);

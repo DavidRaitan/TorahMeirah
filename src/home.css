@@ -34,6 +34,12 @@ a:hover {
   margin-top: 300px;
 }
 
+@media (max-width: 768px) {
+  .button-container {
+    margin-top: 200px; /* Margin-top for phones */
+  }
+}
+
 .button-container button {
   display: inline-block;
   margin-right: 10px;
