@@ -1,8 +1,3 @@
-/* Add this to your App.css or a relevant CSS file */
-.audio-player-container {
-  padding-bottom: 50px; /* Add some padding to avoid overlap with footer */
-}
-
 .controls {
   display: flex;
   align-items: center;
