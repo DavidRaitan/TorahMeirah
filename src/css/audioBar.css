@@ -170,69 +170,67 @@
   }
 } */
 
-
-/* audiobar.css */
 .audio-player {
-  width: 800px;
-  height: fit-content;
-  margin: 20px auto;
-  padding: 2px;
-  border: 1px solid #333;
-  background-color: gray;
-  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
 }
 
 .controls {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .playback-controls {
-  flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjusted for better layout */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .play-pause {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
-  padding-left: 15px;
+  margin-right: 10px;
+}
+
+.time-passed, .time-remaining {
+  font-size: 12px;
+  margin: 0 10px;
 }
 
 .progress-bar {
-  flex-grow: 1; /* Adjusted to fill available space */
+  flex-grow: 1;
   height: 10px;
-  margin: 0 10px;
-  position: relative;
+  background: #ddd;
   border-radius: 5px;
+  cursor: pointer;
+  position: relative;
 }
 
 .progress {
   height: 100%;
-  border-radius: 5px;
-  background-color: rebeccapurple; /* Adjusted to match playback progress */
+  background: #76c7c0;
+  border-radius: 5px 0 0 5px;
 }
 
-.volume-controls {
-  display: flex;
-  align-items: center;
-}
-
-.volume-bar {
-  width: 100px;
+.progress-dot {
+  width: 10px;
   height: 10px;
-  background-color: #ddd;
-  margin: 0 10px;
-  position: relative;
-  border-radius: 5px;
-}
-
-.volume {
-  height: 100%;
-  border-radius: 5px;
+  background: #76c7c0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .dropdown {
@@ -241,108 +239,46 @@
 }
 
 .dropbtn {
-  background-color: rebeccapurple;
+  background-color: #76c7c0;
   color: white;
-  font-weight: bold;
-  padding: 4px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: gray;
-  min-width: 20;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 5px;
-  right: 50%;
-  transform: translateX(50%);
-  border: 2px solid rebeccapurple;
+  overflow: hidden;
 }
 
 .dropdown-content button {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
   width: 100%;
-  text-align: left;
-  padding: 8px;
-  font-size: 12px;
+  background: none;
   border: none;
-  background-color: transparent;
-  font-weight: bolder;
-  color: white;
+  text-align: left;
 }
 
 .dropdown-content button:hover {
-  background-color: rebeccapurple;
+  background-color: #ddd;
+}
+
+.dropdown-content .selected {
+  background-color: #76c7c0;
   color: white;
 }
 
-.dropdown-content button.selected {
-  background-color: rebeccapurple;
-  color: white;
-  font-size: 11px;
-}
-
-.show {
+.dropdown .show {
   display: block;
-}
-
-.progress-dot {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background-color: rebeccapurple;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.progress-bar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
-}
-
-@media (max-width: 768px) {
-  .audio-player {
-    width: 250px;
-    padding: 10px;
-  }
-
-  .controls {
-    flex-direction: column;
-    align-items: stretch; /* Adjusted for better layout */
-  }
-
-  .playback-controls {
-    flex-direction: row; /* Adjusted for better layout */
-    justify-content: space-between; /* Adjusted for better layout */
-    align-items: center; /* Adjusted for better layout */
-  }
-
-  .play-pause {
-    font-size: 18px;
-    padding-left: 0; /* Adjusted for better layout */
-    padding-right: 0; /* Adjusted for better layout */
-    margin-bottom: 10px; /* Adjusted for better layout */
-  }
-
-  .progress-bar {
-    margin: 10px 0;
-  }
-
-  .dropdown {
-    margin-top: 10px;
-  }
 }
