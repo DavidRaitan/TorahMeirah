@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TorahMeirah/static/css/main.0f537661.css",
-    "main.js": "/TorahMeirah/static/js/main.6449a7e3.js",
+    "main.css": "/TorahMeirah/static/css/main.a909a67a.css",
+    "main.js": "/TorahMeirah/static/js/main.99ed8756.js",
     "static/js/453.ad6eb26e.chunk.js": "/TorahMeirah/static/js/453.ad6eb26e.chunk.js",
     "index.html": "/TorahMeirah/index.html",
-    "main.0f537661.css.map": "/TorahMeirah/static/css/main.0f537661.css.map",
-    "main.6449a7e3.js.map": "/TorahMeirah/static/js/main.6449a7e3.js.map",
+    "main.a909a67a.css.map": "/TorahMeirah/static/css/main.a909a67a.css.map",
+    "main.99ed8756.js.map": "/TorahMeirah/static/js/main.99ed8756.js.map",
     "453.ad6eb26e.chunk.js.map": "/TorahMeirah/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f537661.css",
-    "static/js/main.6449a7e3.js"
+    "static/css/main.a909a67a.css",
+    "static/js/main.99ed8756.js"
   ]
 }
