@@ -192,6 +192,11 @@
 }
 
 @media (max-width: 768px) {
+  .audio-player {
+    width: 90%;
+    padding: 10px;
+  }
+
   .controls {
     flex-direction: column; 
   }
@@ -355,7 +360,8 @@
   }
 
   .progress-bar {
-    margin: 10px 0;
+    width: calc(100% - 20px); /* Adjusted width for mobile */
+    margin: 20px 10px; /* Increased margin for spacing */
   }
 
   .dropdown {
