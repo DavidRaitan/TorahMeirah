@@ -186,37 +186,12 @@
   align-items: center;
 }
 
-.controls {
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .audio-player {
-    width: 90%;
-    padding: 10px;
-  }
-
-  .controls {
-    flex-direction: column; 
-  }
-}
-
-
 .playback-controls {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Adjusted for better layout */
 }
-
-
-@media (max-width: 768px) {
-  .playback-controls {
-    flex-direction: column; /* Stack elements on mobile */
-  }
-}
-
 
 .play-pause {
   background: none;
@@ -227,7 +202,7 @@
 }
 
 .progress-bar {
-  width: 100%;
+  flex-grow: 1; /* Adjusted to fill available space */
   height: 10px;
   margin: 0 10px;
   position: relative;
@@ -237,6 +212,7 @@
 .progress {
   height: 100%;
   border-radius: 5px;
+  background-color: rebeccapurple; /* Adjusted to match playback progress */
 }
 
 .volume-controls {
@@ -326,14 +302,6 @@
   pointer-events: none;
 }
 
-.progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: white;
-}
-
 .progress-bar::before {
   content: '';
   position: absolute;
@@ -353,15 +321,24 @@
 
   .controls {
     flex-direction: column;
+    align-items: stretch; /* Adjusted for better layout */
+  }
+
+  .playback-controls {
+    flex-direction: row; /* Adjusted for better layout */
+    justify-content: space-between; /* Adjusted for better layout */
+    align-items: center; /* Adjusted for better layout */
   }
 
   .play-pause {
     font-size: 18px;
+    padding-left: 0; /* Adjusted for better layout */
+    padding-right: 0; /* Adjusted for better layout */
+    margin-bottom: 10px; /* Adjusted for better layout */
   }
 
   .progress-bar {
-    width: calc(100% - 20px); /* Adjusted width for mobile */
-    margin: 20px 10px; /* Increased margin for spacing */
+    margin: 10px 0;
   }
 
   .dropdown {
