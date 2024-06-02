@@ -20,18 +20,17 @@ function AudioBar({ audioUrl, onError = null }) {
     const handleTimeUpdate = () => {
       setCurrentTime(audioRef.current.currentTime);
     };
-  
+
     const handleLoadedData = () => {
       if (audioRef.current) {
         setDuration(audioRef.current.duration);
       }
     };
-    
-  
+
     if (audioRef.current) {
       audioRef.current.addEventListener('timeupdate', handleTimeUpdate);
       audioRef.current.addEventListener('loadeddata', handleLoadedData);
-  
+
       return () => {
         if (audioRef.current) {
           audioRef.current.removeEventListener('timeupdate', handleTimeUpdate);
@@ -40,17 +39,17 @@ function AudioBar({ audioUrl, onError = null }) {
       };
     }
   }, [audioRef.current]);
-  
+
   useEffect(() => {
     const handleError = () => {
       if (onError) {
         onError();
       }
     };
-  
+
     if (audioRef.current) {
       audioRef.current.addEventListener('error', handleError);
-  
+
       return () => {
         if (audioRef.current) {
           audioRef.current.removeEventListener('error', handleError);
@@ -58,7 +57,6 @@ function AudioBar({ audioUrl, onError = null }) {
       };
     }
   }, [audioUrl, onError]);
-  
 
   const toggleAudio = () => {
     if (isPlaying) {
@@ -103,27 +101,25 @@ function AudioBar({ audioUrl, onError = null }) {
     <div className="audio-player">
       <audio ref={audioRef} src={audioUrl} type="audio/mpeg"></audio>
       <div className="controls">
-        <div className="playback-controls">
-          <button onClick={toggleAudio} className="play-pause">
-            {isPlaying ? <FaPause /> : <FaPlay />}
-          </button>
-          <div className="time-passed">{timePassed}</div>
-          <div className="progress-bar" onClick={handleProgressBarClick}>
-            <div
-              className="progress"
-              style={{
-                width: `${(currentTime / duration) * 100}%`,
-              }}
-            ></div>
-            <div
-              className="progress-dot"
-              style={{
-                left: `${(currentTime / duration) * 100}%`,
-              }}
-            ></div>
-          </div>
-          <div className="time-remaining">{timeRemaining}</div>
+        <button onClick={toggleAudio} className="play-pause">
+          {isPlaying ? <FaPause /> : <FaPlay />}
+        </button>
+        <div className="time-passed">{timePassed}</div>
+        <div className="progress-bar" onClick={handleProgressBarClick}>
+          <div
+            className="progress"
+            style={{
+              width: `${(currentTime / duration) * 100}%`,
+            }}
+          ></div>
+          <div
+            className="progress-dot"
+            style={{
+              left: `${(currentTime / duration) * 100}%`,
+            }}
+          ></div>
         </div>
+        <div className="time-remaining">{timeRemaining}</div>
         <div className="dropdown">
           <button className="dropbtn" onClick={() => setDropdownVisible(!dropdownVisible)}>
             {playbackSpeed.toFixed(2)}x

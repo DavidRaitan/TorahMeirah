@@ -169,17 +169,16 @@
     margin-top: 10px;
   }
 } */
-
 .audio-player {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  border-radius: 10px;
+  background: #e0e0e0; /* Gray background for the bar */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   box-sizing: border-box;
 }
 
@@ -204,14 +203,14 @@
 }
 
 .time-passed, .time-remaining {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 10px;
 }
 
 .progress-bar {
   flex-grow: 1;
   height: 10px;
-  background: #ddd;
+  background: #bbb;
   border-radius: 5px;
   cursor: pointer;
   position: relative;
