@@ -1,6 +1,7 @@
-import '../css/audioBar.css';
+// src/Audio/bar.js
 import React, { useRef, useState, useEffect } from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
+import './audioBar.css';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -20,18 +21,17 @@ function AudioBar({ audioUrl, onError = null }) {
     const handleTimeUpdate = () => {
       setCurrentTime(audioRef.current.currentTime);
     };
-  
+
     const handleLoadedData = () => {
       if (audioRef.current) {
         setDuration(audioRef.current.duration);
       }
     };
-    
-  
+
     if (audioRef.current) {
       audioRef.current.addEventListener('timeupdate', handleTimeUpdate);
       audioRef.current.addEventListener('loadeddata', handleLoadedData);
-  
+
       return () => {
         if (audioRef.current) {
           audioRef.current.removeEventListener('timeupdate', handleTimeUpdate);
@@ -40,17 +40,17 @@ function AudioBar({ audioUrl, onError = null }) {
       };
     }
   }, [audioRef.current]);
-  
+
   useEffect(() => {
     const handleError = () => {
       if (onError) {
         onError();
       }
     };
-  
+
     if (audioRef.current) {
       audioRef.current.addEventListener('error', handleError);
-  
+
       return () => {
         if (audioRef.current) {
           audioRef.current.removeEventListener('error', handleError);
@@ -58,7 +58,6 @@ function AudioBar({ audioUrl, onError = null }) {
       };
     }
   }, [audioUrl, onError]);
-  
 
   const toggleAudio = () => {
     if (isPlaying) {
@@ -126,19 +125,21 @@ function AudioBar({ audioUrl, onError = null }) {
         </div>
         <div className="dropdown">
           <button className="dropbtn" onClick={() => setDropdownVisible(!dropdownVisible)}>
-            {playbackSpeed.toFixed(2)}x
+            Speed: {playbackSpeed}x
           </button>
-          <div className={`dropdown-content ${dropdownVisible ? 'show' : ''}`}>
-            {playbackSpeedOptions.map((option, i) => (
-              <button
-                key={i}
-                onClick={() => changePlaybackSpeed(option.value)}
-                className={playbackSpeed === option.value ? 'selected' : ''}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
+          {dropdownVisible && (
+            <div className="dropdown-content">
+              {playbackSpeedOptions.map((option) => (
+                <button
+                  key={option.value}
+                  className={playbackSpeed === option.value ? 'selected' : ''}
+                  onClick={() => changePlaybackSpeed(option.value)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -146,3 +147,4 @@ function AudioBar({ audioUrl, onError = null }) {
 }
 
 export default AudioBar;
+

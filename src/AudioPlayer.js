@@ -35,19 +35,20 @@ import AudioBar from './Audio/bar';
 function AudioPlayer() {
   return (
     <div className="audio-player-container">
-      <h1 className='page'>Audio Player</h1>
-      <ul className='items'>
+      <h1 className="page">Audio Player</h1>
+      <ul className="items">
         {audioData.map((audio, index) => (
           <li key={index}>
-            <h3 className='audio_titles'>{audio.title}</h3>
+            <h3 className="audio_titles">{audio.title}</h3>
             <AudioBar audioUrl={audio.url} />
           </li>
         ))}
       </ul>
-      <p className='footer'>{'\u2722'} Made by El Tzano {'\u2722'}</p>
+      <p className="footer">{'\u2722'} Made by El Tzano {'\u2722'}</p>
     </div>
   );
 }
 
 export default AudioPlayer;
+
 
