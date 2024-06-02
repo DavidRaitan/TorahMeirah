@@ -1,7 +1,6 @@
-.controls {
+controls {
   display: flex;
   align-items: center;
-  /* ... */
 }
 
 @media (max-width: 768px) {
