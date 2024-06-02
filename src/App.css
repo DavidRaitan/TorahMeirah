@@ -27,7 +27,7 @@
 /* Media query for phones */
 @media (max-width: 768px) {
   .App-main {
-    margin-top: 350px; /* Margin-top for phones */
+    margin-top: 250px; /* Margin-top for phones */
 
   }
 }
@@ -197,7 +197,7 @@ code {
 
 @media (max-width: 768px) {
   .audio-player {
-    width: 90%;
+    width: 400px;
     margin: 20px auto;
     padding: 10px;
     border-radius: 20px;
