@@ -8,6 +8,7 @@ function AboutUs() {
         <button onClick={() => window.location.href="#progress"} className="button">Our Progress</button>
       </div>
 
+      <div className="text">
       <section id="vision" className="section">
         <h3>THE VISION</h3>
         <p>Torah Meirah is the idea and the vision of learning all the fundamental elements of the Torah in 5 - 10 years.</p>
@@ -29,6 +30,7 @@ function AboutUs() {
       </section>
 
       <p className='footer'>{'\u2722'} Made by El Tzano {'\u2722'} </p> 
+    </div>
     </div>
     
   );
