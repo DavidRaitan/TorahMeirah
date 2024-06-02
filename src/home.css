@@ -31,12 +31,12 @@ a:hover {
 
 .button-container {
   margin-bottom: 20px;
-  margin-top: 560px;
+  margin-top: 510px;
 }
 
 @media (max-width: 768px) {
   .button-container {
-    margin-top: 860px; /* Margin-top for phones */
+    margin-top: 890px; /* Margin-top for phones */
   }
 }
 

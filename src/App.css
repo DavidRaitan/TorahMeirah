@@ -27,7 +27,7 @@
 /* Media query for phones */
 @media (max-width: 768px) {
   .App-main {
-    margin-top: 390px; /* Margin-top for phones */
+    margin-top: 350px; /* Margin-top for phones */
 
   }
 }
@@ -60,7 +60,6 @@ li {
 /* audioBar.css */
 .audio-player {
   width: 100%;
-  max-width: 400px;
   margin: 20px auto;
   padding: 10px;
   border: 1px solid #333;
