@@ -17,12 +17,21 @@
 }
 
 .App-main {
-  margin-top: 100px;
+  margin-top: 150px; /* Default margin-top for PCs */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px); /* Adjust height as needed */
 }
+
+/* Media query for phones */
+@media (max-width: 768px) {
+  .App-main {
+    margin-top: 500px; /* Margin-top for phones */
+  }
+}
+
+
 
 button {
   margin-top: 10px;
