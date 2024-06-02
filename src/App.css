@@ -17,7 +17,7 @@
 }
 
 .App-main {
-  margin-top: 230px; /* Default margin-top for PCs */
+  margin-top: 220px; /* Default margin-top for PCs */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,8 @@
 /* Media query for phones */
 @media (max-width: 768px) {
   .App-main {
-    margin-top: 420px; /* Margin-top for phones */
+    margin-top: 390px; /* Margin-top for phones */
+
   }
 }
 

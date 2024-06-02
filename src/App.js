@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to Torah Meirah</h1>
+        <h1>Torah Meirah</h1>
         <button onClick={toggleComponent} className="toggle-button">
           {showAboutUs ? 'About' : 'Audio Classes'}
 
