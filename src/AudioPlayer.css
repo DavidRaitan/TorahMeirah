@@ -3,6 +3,19 @@
   padding-bottom: 50px; /* Add some padding to avoid overlap with footer */
 }
 
+.controls {
+  display: flex;
+  align-items: center;
+  /* ... */
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column; /* Change to column layout on mobile */
+  }
+}
+
+
 .footer {
   margin-top: 40px;
   font-family: serif;
