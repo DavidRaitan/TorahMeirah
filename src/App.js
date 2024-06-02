@@ -5,7 +5,7 @@ import AboutUs from './AboutUs';
 import AudioPlayer from './AudioPlayer';
 
 function App() {
-  const [showAboutUs, setShowAboutUs] = useState(false);
+  const [showAboutUs, setShowAboutUs] = useState(true);
 
   const toggleComponent = () => {
     setShowAboutUs((prevShowAboutUs) => !prevShowAboutUs);
@@ -16,11 +16,13 @@ function App() {
       <header className="App-header">
         <h1>Welcome to Torah Meirah</h1>
         <button onClick={toggleComponent} className="toggle-button">
-          {showAboutUs ? 'Audio Classes' : 'About'}
+          {showAboutUs ? 'About' : 'Audio Classes'}
+
         </button>
       </header>
       <main className="App-main">
-        {showAboutUs ? <AboutUs /> : <AudioPlayer />}
+        {showAboutUs ? <AudioPlayer/>:  <AboutUs />}
+
       </main>
     </div>
   );
