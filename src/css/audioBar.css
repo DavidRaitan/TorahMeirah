@@ -170,3 +170,133 @@
   }
 } */
 
+
+.audio-player {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.play-pause {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.time-passed,
+.time-remaining {
+  font-size: 0.9em;
+  width: 50px;
+  text-align: center;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px 0 0 5px;
+}
+
+.progress-dot {
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #007bff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content button {
+  width: 100%;
+  padding: 8px 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.dropdown-content button:hover,
+.dropdown-content button.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .playback-controls {
+    flex-direction: column;
+  }
+
+  .progress-bar {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .time-passed,
+  .time-remaining {
+    width: auto;
+  }
+}
