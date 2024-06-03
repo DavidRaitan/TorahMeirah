@@ -1,40 +1,37 @@
+/* General Styles */
 .audio-player {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e0e0e0; /* Gray background for the bar */
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
   width: 100%;
   max-width: 800px;
-  box-sizing: border-box;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #333;
+  background-color: gray;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .controls {
   display: flex;
   align-items: center;
-  width: 100%;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between; /* Ensure elements are spaced properly */
 }
 
 .playback-controls {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  flex-wrap: nowrap;
 }
 
 .play-pause {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
 }
 
-.time-passed, .time-remaining {
+.time-passed,
+.time-remaining {
   font-size: 14px;
   margin: 0 10px;
 }
@@ -42,101 +39,114 @@
 .progress-bar {
   flex-grow: 1;
   height: 10px;
-  background: #bbb;
-  border-radius: 5px;
-  cursor: pointer;
-  position: relative;
   margin: 0 10px;
-  min-width: 150px;
+  position: relative;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .progress {
   height: 100%;
-  background: #76c7c0;
-  border-radius: 5px 0 0 5px;
+  background-color: rebeccapurple;
+  border-radius: 5px;
 }
 
 .progress-dot {
-  width: 10px;
-  height: 10px;
-  background: #76c7c0;
-  border-radius: 50%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .dropdown {
   position: relative;
-  margin-left: 10px;
+  display: inline-block;
 }
 
 .dropbtn {
-  background-color: #76c7c0;
+  background-color: rebeccapurple;
   color: white;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 8px;
+  font-size: 12px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 120px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  background-color: gray;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 5px;
-  overflow: hidden;
-  right: 0;
+  right: 50%;
+  transform: translateX(50%);
+  border: 2px solid rebeccapurple;
 }
 
 .dropdown-content button {
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
   width: 100%;
-  background: none;
+  padding: 8px;
+  font-size: 12px;
   border: none;
+  background-color: transparent;
+  color: white;
   text-align: left;
 }
 
-.dropdown-content button:hover {
-  background-color: #ddd;
-}
-
-.dropdown-content .selected {
-  background-color: #76c7c0;
+.dropdown-content button:hover,
+.dropdown-content button.selected {
+  background-color: rebeccapurple;
   color: white;
 }
 
-.dropdown .show {
+.show {
   display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+/* Mobile Styles */
+@media (max-width: 768px) {
   .audio-player {
-    flex-direction: column;
-    align-items: stretch;
+    padding: 10px;
   }
 
   .controls {
-    flex-direction: column;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
   }
 
   .playback-controls {
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-basis: 100%; /* Ensure it takes full width */
   }
 
-  .dropdown {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .play-pause {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .time-passed,
+  .time-remaining {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+
+  .progress-bar {
+    flex-grow: 1;
+    margin: 5px 10px;
+  }
+
+  .dropbtn {
+    font-size: 10px;
+    padding: 5px;
   }
 }
