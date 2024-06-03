@@ -170,66 +170,68 @@
   }
 } */
 
-
-
-/* audioBar.css */
 .audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
   width: 100%;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #333;
-  background-color: gray;
-  border-radius: 40px;
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 .controls {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .playback-controls {
   display: flex;
   align-items: center;
-  width: 90%;
+  flex-grow: 1;
 }
 
 .play-pause {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+.time-passed, .time-remaining {
+  font-size: 12px;
+  margin: 0 10px;
 }
 
 .progress-bar {
-  width: 100%;
+  flex-grow: 1;
   height: 10px;
-  background-color: orange;
-  margin: 0 10px;
-  position: relative;
+  background: #ddd;
   border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
 }
 
 .progress {
   height: 100%;
-  background-color: #4caf50;
-  border-radius: 5px;
+  background: #76c7c0;
+  border-radius: 5px 0 0 5px;
 }
 
 .progress-dot {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: rebeccapurple;
+  background: #76c7c0;
   border-radius: 50%;
-  pointer-events: none;
-}
-
-.time-passed,
-.time-remaining {
-  font-size: 14px;
-  margin: 0 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .dropdown {
@@ -237,107 +239,47 @@
 }
 
 .dropbtn {
-  background-color: rebeccapurple;
+  background-color: #76c7c0;
   color: white;
-  font-weight: bold;
-  padding: 4px;
-  margin: 10px;
-  font-size: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: gray;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 5px;
-  right: 50%;
-  transform: translateX(50%);
-  border: 2px solid rebeccapurple;
+  overflow: hidden;
+  right: 0;
 }
 
 .dropdown-content button {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
   width: 100%;
-  text-align: left;
-  padding: 8px;
-  font-size: 12px;
+  background: none;
   border: none;
-  background-color: transparent;
-  font-weight: bolder;
-  color: white;
+  text-align: left;
 }
 
 .dropdown-content button:hover {
-  background-color: rebeccapurple;
+  background-color: #ddd;
+}
+
+.dropdown-content .selected {
+  background-color: #76c7c0;
   color: white;
 }
 
-.dropdown-content button.selected {
-  background-color: rebeccapurple;
-  color: white;
-  font-size: 11px;
-}
-
-.show {
+.dropdown .show {
   display: block;
-}
-
-.selected {
-  background-color: #4caf50;
-  color: blue;
-}
-
-/* index.css */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-main{
-  display: flex;
-  margin-top: 400;
-
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-@media (max-width: 768px) {
-  .audio-player {
-    width: 400px;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 20px;
-  }
-
-  .playback-controls {
-    align-items: center;
-  }
-
-  .play-pause {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .progress-bar {
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  .time-passed,
-  .time-remaining {
-    font-size: 12px;
-    margin: 5px 0;
-  }
-
-  .dropbtn {
-    font-size: 14px;
-  }
 }
