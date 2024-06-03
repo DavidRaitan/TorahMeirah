@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e0e0e0; /* Gray background for the bar */
+  background: #f5f5f5; /* Light gray background for the bar */
   border: 1px solid #ccc;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
   max-width: 800px;
   box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .controls {
@@ -26,28 +27,37 @@
 }
 
 .play-pause {
-  background: none;
+  background: #76c7c0;
   border: none;
-  font-size: 24px;
+  color: white;
+  font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .time-passed, .time-remaining {
   font-size: 14px;
   margin: 0 10px;
+  color: #333;
 }
 
 .progress-bar {
   flex-grow: 1;
   height: 10px;
-  background: #bbb;
+  background: #ddd;
   border-radius: 5px;
   cursor: pointer;
   position: relative;
   margin: 0 10px;
-  width: 450px;
-  max-width: 75%; /* Adjust width on smaller screens */
+  max-width: 450px;
+  width: 100%;
 }
 
 .progress {
@@ -57,8 +67,8 @@
 }
 
 .progress-dot {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: #76c7c0;
   border-radius: 50%;
   position: absolute;
@@ -72,13 +82,14 @@
 }
 
 .dropbtn {
-  background-color: goldenrod;
+  background-color: #76c7c0;
   color: white;
   padding: 8px 16px;
   font-size: 14px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-content {
@@ -86,7 +97,7 @@
   position: absolute;
   background-color: #f9f9f9;
   min-width: 120px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 5px;
   overflow: hidden;
@@ -130,6 +141,12 @@
 
   .dropdown {
     margin-left: 5px; /* Adjust spacing on smaller screens */
+  }
+
+  .play-pause {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 
   .playback-controls {
