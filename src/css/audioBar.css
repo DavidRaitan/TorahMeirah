@@ -84,12 +84,26 @@
 .dropbtn {
   background-color: #76c7c0;
   color: white;
-  padding: 8px 16px;
+  padding: 8px;
   font-size: 14px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn svg {
+  margin-right: 5px;
+}
+
+/* Responsive design for playback speed button */
+@media (max-width: 600px) {
+  .dropbtn {
+    padding: 6px;
+    font-size: 12px;
+  }
 }
 
 .dropdown-content {

@@ -1,6 +1,6 @@
 import '../css/audioBar.css';
 import React, { useRef, useState, useEffect } from 'react';
-import { FaPlay, FaPause } from 'react-icons/fa';
+import { FaPlay, FaPause, FaTachometerAlt } from 'react-icons/fa';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -124,7 +124,7 @@ function AudioBar({ audioUrl, onError = null }) {
         </div>
         <div className="dropdown">
           <button className="dropbtn" onClick={() => setDropdownVisible(!dropdownVisible)}>
-            {playbackSpeed.toFixed(2)}x
+            <FaTachometerAlt /> {playbackSpeed.toFixed(2)}x
           </button>
           <div className={`dropdown-content ${dropdownVisible ? 'show' : ''}`}>
             {playbackSpeedOptions.map((option, i) => (
