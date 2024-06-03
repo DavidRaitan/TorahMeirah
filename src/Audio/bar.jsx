@@ -1,7 +1,7 @@
 // src/Audio/bar.js
+import '../css/audioBar.css';
 import React, { useRef, useState, useEffect } from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
-import '../css/audioBar.css';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);

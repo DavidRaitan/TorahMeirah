@@ -1,37 +1,38 @@
-/* General Styles */
 .audio-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0; /* Gray background for the bar */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
   width: 100%;
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #333;
-  background-color: gray;
-  border-radius: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .controls {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensure elements are spaced properly */
+  width: 100%;
 }
 
 .playback-controls {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  flex-wrap: nowrap;
 }
 
 .play-pause {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
   margin-right: 10px;
 }
 
-.time-passed,
-.time-remaining {
+.time-passed, .time-remaining {
   font-size: 14px;
   margin: 0 10px;
 }
@@ -39,114 +40,101 @@
 .progress-bar {
   flex-grow: 1;
   height: 10px;
-  margin: 0 10px;
-  position: relative;
-  background-color: #ddd;
+  background: #bbb;
   border-radius: 5px;
-  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
+  width: 450px;
 }
 
 .progress {
   height: 100%;
-  background-color: rebeccapurple;
-  border-radius: 5px;
+  background: #76c7c0;
+  border-radius: 5px 0 0 5px;
 }
 
 .progress-dot {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: rebeccapurple;
+  background: #76c7c0;
   border-radius: 50%;
-  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  margin-left: 10px;
 }
 
 .dropbtn {
-  background-color: rebeccapurple;
+  background-color: #76c7c0;
   color: white;
-  padding: 8px;
-  font-size: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  font-weight: bold;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: gray;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 5px;
-  right: 50%;
-  transform: translateX(50%);
-  border: 2px solid rebeccapurple;
+  overflow: hidden;
+  right: 0;
 }
 
 .dropdown-content button {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
   width: 100%;
-  padding: 8px;
-  font-size: 12px;
+  background: none;
   border: none;
-  background-color: transparent;
-  color: white;
   text-align: left;
 }
 
-.dropdown-content button:hover,
-.dropdown-content button.selected {
-  background-color: rebeccapurple;
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content .selected {
+  background-color: #76c7c0;
   color: white;
 }
 
-.show {
+.dropdown .show {
   display: block;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .audio-player {
-    padding: 10px;
-  }
-
+/* Responsive Design */
+@media (max-width: 600px) {
   .controls {
-    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .playback-controls {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    flex-basis: 100%; /* Ensure it takes full width */
-  }
-
-  .play-pause {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-
-  .time-passed,
-  .time-remaining {
-    font-size: 12px;
-    margin: 0 5px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .progress-bar {
-    flex-grow: 1;
-    margin: 5px 10px;
+    width: 75%; /* 75% of the screen width */
+    margin: 0 auto; /* Center align */
   }
 
-  .dropbtn {
-    font-size: 10px;
-    padding: 5px;
+  .dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
