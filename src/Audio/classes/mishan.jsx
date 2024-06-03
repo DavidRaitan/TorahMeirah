@@ -112,7 +112,8 @@ function getCollectionsName(index) {
 
 function GetTodaysMishnaChapter(){
     const today = new Date();
-    const starting_date = new Date('2024-05-01');
+    // const starting_date = new Date('2024-05-01');
+    const starting_date = new Date('2024-06-04');
     const daysPassed = Math.floor((today - starting_date) / (1000 * 60 * 60 * 24)); 
 
     const chapterInfo = findChapterInfo(daysPassed);

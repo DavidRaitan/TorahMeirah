@@ -101,25 +101,27 @@ function AudioBar({ audioUrl, onError = null }) {
     <div className="audio-player">
       <audio ref={audioRef} src={audioUrl} type="audio/mpeg"></audio>
       <div className="controls">
-        <button onClick={toggleAudio} className="play-pause">
-          {isPlaying ? <FaPause /> : <FaPlay />}
-        </button>
-        <div className="time-passed">{timePassed}</div>
-        <div className="progress-bar" onClick={handleProgressBarClick}>
-          <div
-            className="progress"
-            style={{
-              width: `${(currentTime / duration) * 100}%`,
-            }}
-          ></div>
-          <div
-            className="progress-dot"
-            style={{
-              left: `${(currentTime / duration) * 100}%`,
-            }}
-          ></div>
+        <div className="playback-controls">
+          <button onClick={toggleAudio} className="play-pause">
+            {isPlaying ? <FaPause /> : <FaPlay />}
+          </button>
+          <div className="time-passed">{timePassed}</div>
+          <div className="progress-bar" onClick={handleProgressBarClick}>
+            <div
+              className="progress"
+              style={{
+                width: `${(currentTime / duration) * 100}%`,
+              }}
+            ></div>
+            <div
+              className="progress-dot"
+              style={{
+                left: `${(currentTime / duration) * 100}%`,
+              }}
+            ></div>
+          </div>
+          <div className="time-remaining">{timeRemaining}</div>
         </div>
-        <div className="time-remaining">{timeRemaining}</div>
         <div className="dropdown">
           <button className="dropbtn" onClick={() => setDropdownVisible(!dropdownVisible)}>
             {playbackSpeed.toFixed(2)}x
