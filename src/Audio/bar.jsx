@@ -1,4 +1,3 @@
-// src/Audio/bar.js
 import '../css/audioBar.css';
 import React, { useRef, useState, useEffect } from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
